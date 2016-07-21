@@ -24,6 +24,6 @@ prettyName('issam el-said') // => Issam El-Said
 prettyName('byun jong-ha') // => Byun Jong-Ha
 prettyName('armand le veel') // => Armand Le Veel
 prettyName('dora de larios') // => Dora de Larios
-prettyName('fernand allard-l'olivier') // => Fernand Allard-L\'Olivier
+prettyName('fernand allard-l\'olivier') // => Fernand Allard-L\'Olivier
 prettyName('pietro di francesco degli orioli') // => Pietro di Francesco degli Orioli
 ```

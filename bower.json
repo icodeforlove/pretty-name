@@ -1,0 +1,19 @@
+{
+  "name": "pretty-name",
+  "version": "0.0.1",
+  "authors": [
+    "Chad Scira <chadvscira@gmail.com>"
+  ],
+  "main": "dist/prettyName.js",
+  "license": "MIT",
+  "ignore": [
+    "lib",
+    "node_modules",
+    "test",
+    "Gruntfile.js",
+    "index.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/icodeforlove/string-saw"
+}

@@ -48,7 +48,7 @@ describe('General', function() {
 		expect(prettyName('Johannes Marinus ten Cate')).toEqual('Johannes Marinus ten Cate');
 		expect(prettyName('Roberto Sebastian Matta Echaurren')).toEqual('Roberto Sebastian Matta Echaurren');
 		expect(prettyName('Gustave Edouard Le Senechal de Kerdreoret')).toEqual('Gustave Edouard Le Senechal de Kerdreoret');
-		expect(prettyName('Abdel Hadey el-Gazzar')).toEqual('Abdel Hadey el-Gazzar');
+		expect(prettyName('Abdel Hadey El-Gazzar')).toEqual('Abdel Hadey El-Gazzar');
 		expect(prettyName('Louay Kayyali')).toEqual('Louay Kayyali');
 		expect(prettyName('Van Huysum')).toEqual('Van Huysum');
 		expect(prettyName('Jean Le Merdy')).toEqual('Jean Le Merdy');
@@ -78,7 +78,7 @@ describe('General', function() {
 		expect(prettyName('Choi Wook-Kyung')).toEqual('Choi Wook-Kyung');
 		expect(prettyName('Jean Louis Le Toullec')).toEqual('Jean Louis Le Toullec');
 		expect(prettyName('Josep Riera I Arago')).toEqual('Josep Riera I Arago');
-		expect(prettyName('Omar el-Nagdi')).toEqual('Omar el-Nagdi');
+		expect(prettyName('Omar El-Nagdi')).toEqual('Omar El-Nagdi');
 		expect(prettyName('Mohammed Ben Ali R\'Bati')).toEqual('Mohammed Ben Ali R\'Bati');
 		expect(prettyName('Aleksandr Evgen\'Evich Iakovlev')).toEqual('Aleksandr Evgen\'Evich Iakovlev');
 		expect(prettyName('Aarnout ter Himpel')).toEqual('Aarnout ter Himpel');
@@ -88,7 +88,7 @@ describe('General', function() {
 		expect(prettyName('De Vos')).toEqual('De Vos');
 		expect(prettyName('Van Lint')).toEqual('Van Lint');
 		expect(prettyName('Attributed to Pierre-Paul Prud\'Hon')).toEqual('Attributed to Pierre-Paul Prud\'Hon');
-		expect(prettyName('Adel el-Siwi')).toEqual('Adel el-Siwi');
+		expect(prettyName('Adel El-Siwi')).toEqual('Adel El-Siwi');
 		expect(prettyName('Ernest Le Villain')).toEqual('Ernest Le Villain');
 		expect(prettyName('Tommaso d\'Antonio Manzuoli')).toEqual('Tommaso d\'Antonio Manzuoli');
 		expect(prettyName('Su-En Wong')).toEqual('Su-En Wong');
@@ -97,14 +97,14 @@ describe('General', function() {
 		expect(prettyName('Pieter ten Cate')).toEqual('Pieter ten Cate');
 		expect(prettyName('Francois van den Berghe')).toEqual('Francois van den Berghe');
 		expect(prettyName('Kwon Young-Woo')).toEqual('Kwon Young-Woo');
-		expect(prettyName('Djanira da Motta E Silva')).toEqual('Djanira da Motta E Silva');
+		expect(prettyName('Djanira da Motta e Silva')).toEqual('Djanira da Motta e Silva');
 		expect(prettyName('Jean Baptiste Le Paon')).toEqual('Jean Baptiste Le Paon');
 		expect(prettyName('Olivier Le May')).toEqual('Olivier Le May');
 		expect(prettyName('Studio Bbpr')).toEqual('Studio Bbpr');
 		expect(prettyName('Leslie van der Sluys')).toEqual('Leslie van der Sluys');
 		expect(prettyName('Yim Jik-Soon')).toEqual('Yim Jik-Soon');
 		expect(prettyName('Choi Young-Rim')).toEqual('Choi Young-Rim');
-		expect(prettyName('Abdellatif Ala-el-Din')).toEqual('Abdellatif Ala-el-Din');
+		expect(prettyName('Abdellatif Ala-El-Din')).toEqual('Abdellatif Ala-El-Din');
 		expect(prettyName('Hubert Le Gall')).toEqual('Hubert Le Gall');
 		expect(prettyName('Jules Le Ray')).toEqual('Jules Le Ray');
 		expect(prettyName('Van Ostade')).toEqual('Van Ostade');
@@ -126,7 +126,7 @@ describe('General', function() {
 		expect(prettyName('Qiu Jiongjiong')).toEqual('Qiu Jiongjiong');
 		expect(prettyName('Gaston la Touche')).toEqual('Gaston la Touche');
 		expect(prettyName('Jean Le Guennec')).toEqual('Jean Le Guennec');
-		expect(prettyName('Aref el-Rayess')).toEqual('Aref el-Rayess');
+		expect(prettyName('Aref El-Rayess')).toEqual('Aref El-Rayess');
 		expect(prettyName('Follower of Eustache Le Sueur')).toEqual('Follower of Eustache Le Sueur');
 		expect(prettyName('Krishnaji Howlaji Ara')).toEqual('Krishnaji Howlaji Ara');
 		expect(prettyName('Andrea de Zerega')).toEqual('Andrea de Zerega');
@@ -140,7 +140,7 @@ describe('General', function() {
 		expect(prettyName('Luca Dall\'Olio')).toEqual('Luca Dall\'Olio');
 		expect(prettyName('Attributed to Jean Jacques Le Barbier the Elder')).toEqual('Attributed to Jean Jacques Le Barbier the Elder');
 		expect(prettyName('Andre Guerin Le Guay')).toEqual('Andre Guerin Le Guay');
-		expect(prettyName('Issam el-Said')).toEqual('Issam el-Said');
+		expect(prettyName('Issam El-Said')).toEqual('Issam El-Said');
 		expect(prettyName('Quac In-Sik')).toEqual('Quac In-Sik');
 		expect(prettyName('Lucia Ponga degli Ancillo')).toEqual('Lucia Ponga degli Ancillo');
 		expect(prettyName('Khaled Ben Slimane')).toEqual('Khaled Ben Slimane');
@@ -215,8 +215,8 @@ describe('General', function() {
 		expect(prettyName('Jean Baptiste Joseph Le Tellier')).toEqual('Jean Baptiste Joseph Le Tellier');
 		expect(prettyName('Philip van Brunt')).toEqual('Philip van Brunt');
 		expect(prettyName('Stephane Le Grec')).toEqual('Stephane Le Grec');
-		expect(prettyName('Alejandro de Riquer E Inglada')).toEqual('Alejandro de Riquer E Inglada');
-		expect(prettyName('Shiy de-Jinn')).toEqual('Shiy de-Jinn');
+		expect(prettyName('Alejandro de Riquer e Inglada')).toEqual('Alejandro de Riquer e Inglada');
+		expect(prettyName('Shiy De-Jinn')).toEqual('Shiy De-Jinn');
 		expect(prettyName('Hatsuyama Shigeru')).toEqual('Hatsuyama Shigeru');
 		expect(prettyName('El Seed')).toEqual('El Seed');
 		expect(prettyName('Eveline Le Mouel')).toEqual('Eveline Le Mouel');
@@ -283,7 +283,7 @@ describe('General', function() {
 		expect(prettyName('Attributed to Sauveur Le Conte')).toEqual('Attributed to Sauveur Le Conte');
 		expect(prettyName('Jacques Le Chevalier')).toEqual('Jacques Le Chevalier');
 		expect(prettyName('Jan Te Wierik')).toEqual('Jan Te Wierik');
-		expect(prettyName('Hatem el-Mekki')).toEqual('Hatem el-Mekki');
+		expect(prettyName('Hatem El-Mekki')).toEqual('Hatem El-Mekki');
 		expect(prettyName('Henri Le Hon')).toEqual('Henri Le Hon');
 		expect(prettyName('Jean Pierre Le Bras')).toEqual('Jean Pierre Le Bras');
 		expect(prettyName('Jehan Le Liepvre')).toEqual('Jehan Le Liepvre');
@@ -308,7 +308,7 @@ describe('General', function() {
 		expect(prettyName('Mappin and Webb LTD')).toEqual('Mappin and Webb LTD');
 		expect(prettyName('Leon Jules Alphonse Le Royer')).toEqual('Leon Jules Alphonse Le Royer');
 		expect(prettyName('Leon Le Goache de Belle')).toEqual('Leon Le Goache de Belle');
-		expect(prettyName('Mohamed el-Baz')).toEqual('Mohamed el-Baz');
+		expect(prettyName('Mohamed El-Baz')).toEqual('Mohamed El-Baz');
 		expect(prettyName('Imad Al-Hassani')).toEqual('Imad Al-Hassani');
 		expect(prettyName('Jan de vos IV')).toEqual('Jan de vos IV');
 		expect(prettyName('Pierre d\'Avesn')).toEqual('Pierre d\'Avesn');
@@ -353,7 +353,7 @@ describe('General', function() {
 		expect(prettyName('Pierluca degli Innocenti')).toEqual('Pierluca degli Innocenti');
 		expect(prettyName('Piero Dalle Ceste')).toEqual('Piero Dalle Ceste');
 		expect(prettyName('Riza-I Abbasi')).toEqual('Riza-I Abbasi');
-		expect(prettyName('Rouben ter-Arutunian')).toEqual('Rouben ter-Arutunian');
+		expect(prettyName('Rouben Ter-Arutunian')).toEqual('Rouben Ter-Arutunian');
 		expect(prettyName('Neville Le Ray')).toEqual('Neville Le Ray');
 		expect(prettyName('Raja Shahriman Bin Raza Aziddin')).toEqual('Raja Shahriman Bin Raza Aziddin');
 		expect(prettyName('Ryoo Byung-Yup')).toEqual('Ryoo Byung-Yup');
@@ -446,7 +446,7 @@ describe('General', function() {
 		expect(prettyName('Gerolamo Dai Libri')).toEqual('Gerolamo Dai Libri');
 		expect(prettyName('After Pierre-Paul Prud\'Hon')).toEqual('After Pierre-Paul Prud\'Hon');
 		expect(prettyName('Alfred di Cesare')).toEqual('Alfred di Cesare');
-		expect(prettyName('Amin el-Bacha')).toEqual('Amin el-Bacha');
+		expect(prettyName('Amin El-Bacha')).toEqual('Amin El-Bacha');
 		expect(prettyName('Van der Does')).toEqual('Van der Does');
 		expect(prettyName('Van der Lamen')).toEqual('Van der Lamen');
 		expect(prettyName('Thomas Le Hardy')).toEqual('Thomas Le Hardy');
@@ -522,7 +522,7 @@ describe('General', function() {
 		expect(prettyName('How & Nosm')).toEqual('How & Nosm');
 		expect(prettyName('Hanna Bekker Vom Rath')).toEqual('Hanna Bekker Vom Rath');
 		expect(prettyName('Jane Le Soudier')).toEqual('Jane Le Soudier');
-		expect(prettyName('Jaune Quick-to-See Smith')).toEqual('Jaune Quick-to-See Smith');
+		expect(prettyName('Jaune Quick-To-See Smith')).toEqual('Jaune Quick-To-See Smith');
 		expect(prettyName('Pauline Caron-Langlois')).toEqual('Pauline Caron-Langlois');
 		expect(prettyName('Nicholas de Wael')).toEqual('Nicholas de Wael');
 		expect(prettyName('Octave Penguilly-L\'Haridon')).toEqual('Octave Penguilly-L\'Haridon');
@@ -584,7 +584,7 @@ describe('General', function() {
 		expect(prettyName('Charles-Louis-Francois Le Carpentier')).toEqual('Charles-Louis-Francois Le Carpentier');
 		expect(prettyName('Christiaan ten Bruggen Kate')).toEqual('Christiaan ten Bruggen Kate');
 		expect(prettyName('Augustine Dall\'Ava')).toEqual('Augustine Dall\'Ava');
-		expect(prettyName('Avdei B ter-Oganian')).toEqual('Avdei B ter-Oganian');
+		expect(prettyName('Avdei B Ter-Oganian')).toEqual('Avdei B Ter-Oganian');
 		expect(prettyName('Hendrik Gerard ten Hoet')).toEqual('Hendrik Gerard ten Hoet');
 		expect(prettyName('Henning Damgaard-Sorensen')).toEqual('Henning Damgaard-Sorensen');
 		expect(prettyName('Ibrahim el Dessouki')).toEqual('Ibrahim el Dessouki');
@@ -595,7 +595,6 @@ describe('General', function() {
 		expect(prettyName('Alfred Le Petit')).toEqual('Alfred Le Petit');
 		expect(prettyName('Amalda Hubrecht')).toEqual('Amalda Hubrecht');
 		expect(prettyName('Ambroise Charlemagne Victor Le Chenetier')).toEqual('Ambroise Charlemagne Victor Le Chenetier');
-		expect(prettyName('Andre E van Opstal')).toEqual('Andre E van Opstal');
 		expect(prettyName('Andre Paul Le Roux')).toEqual('Andre Paul Le Roux');
 		expect(prettyName('Antoine Le Grand')).toEqual('Antoine Le Grand');
 		expect(prettyName('Albert Le Normand')).toEqual('Albert Le Normand');

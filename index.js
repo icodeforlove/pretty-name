@@ -1,8 +1,10 @@
 var saw = require('string-saw'),
 	delimiterRegEx = /\(|\)|\[|\]| |-|'|"|,|\/|\\/g,
 	abbreviationRegExp = /^(.\.?(?:\b|\.))+$/,
-	forceCapitalizeRegExp = /^(?:i|ii|iii|iv|v|vi|vii|viii|ix|x|ltd)$/i,
-	forceLowerCaseRegExp = /^(?:af|an|of|della|van|von|vos|de|di|da|du|et|el|la|der|den|del|dal|dem|des|dei|dos|der|to|the|ten|ter|and|met|delle|dalla|degli|il)$/i,
+	forceCapitalizeRegExp = /^(?:i|ii|iii|iv|v|vi|vii|viii|ix|x|ltd)\.?$/i,
+	forceLowerCaseRegExp = /\b(?:af|an|of|della|van|von|vos|de|di|da|du|et|el|la|der|den|del|dal|dem|des|dei|dos|der|to|the|ten|ter|and|met|delle|dalla|degli|il)$\b/i,
+	forceLowerCaseFullMatchRegExp = new RegExp('^' + forceLowerCaseRegExp.source + '$', forceLowerCaseRegExp.flags),
+	forceSingleLetterLowerCaseRegExp = /^(?:y|e)$/i,
 	forceFormatting = {
 		// maybe just fill this up with hard coded logic?
 		le: 'Le'
@@ -12,16 +14,18 @@ var saw = require('string-saw'),
 	skipCapitalizedAbbreviationsRegExp = /^[A-Z]{2,3}$/,
 	capitalsRegExp = /[A-Z]/g;
 
-function capitalizeWordInName (s, index, array, source) {
+function capitalizeWordInName (s, index, array, source, delimiters) {
 	// skip
 	var capitalizedLetters = source.match(capitalsRegExp),
 		capitalizedPercentage = capitalizedLetters ? capitalizedLetters.length / source.length : 0,
 		isFirstWord = index === 0,
 		isLastWord = index === array.length - 1,
-		totalWords = array.length;
+		totalWords = array.length,
+		previousDelimiter = delimiters[index - 1],
+		nextDelimiter = delimiters[index];
 
 	// skip manuiplation
-	if (!forceLowerCaseRegExp.test(s) && (
+	if (!forceLowerCaseFullMatchRegExp.test(s) && (
 		// we only want to apply these changes if it looks like the whole string is not capitalized
 		skipCapitalizedPrefixesRegExp.test(s) ||
 		(capitalizedPercentage < 0.7 && skipCapitalizedAbbreviationsRegExp.test(s))
@@ -38,10 +42,9 @@ function capitalizeWordInName (s, index, array, source) {
 		return forceFormatting[s.toLowerCase()];
 	}
 
-	if (!isFirstWord && !isLastWord && (
-		s.match(forceLowerCaseRegExp) ||
-		// spanish y
-		(s.match(/^y$/i) && totalWords > 3)
+	if (!isFirstWord && !isLastWord && nextDelimiter !== '-' && (
+		forceLowerCaseFullMatchRegExp.test(s) ||
+		(forceSingleLetterLowerCaseRegExp.test(s) && totalWords > 3 && !forceLowerCaseRegExp.test(source))
 	)) {
 		return s;
 	} else if (forceCapitalizeRegExp.test(s) || abbreviationRegExp.test(s)) {
@@ -83,7 +86,7 @@ function prettyName (name) {
 	name = $name
 		.split(delimiterRegEx)
 		.map(function (s, index, array) {
-			return capitalizeWordInName(s, index, array, name);
+			return capitalizeWordInName(s, index, array, name, delimiters);
 		})
 		.join(function (item, index) {
 			return delimiters[index];

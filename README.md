@@ -1,6 +1,6 @@
 # pretty-name [![Build Status](https://travis-ci.org/icodeforlove/pretty-name.png?branch=master)](https://travis-ci.org/icodeforlove/pretty-name)
 
-provides an easy way to do proper capilization to names
+provides an easy way to do mostly correct capilization to international names, much better than just captializing the first letter of every word.
 
 ## install
 
@@ -19,8 +19,11 @@ bower install pretty-name
 ```javascript
 var prettyName = require('pretty-name');
 
-prettyName('ANDY WARHOL') // => Andy Warhol
-prettyName('ANDY WARHOL III') // => Andy Warhol III
-prettyName('NADINE BOUDKOVSKI-KIBALTCHITCH') // => Nadine Boudkovski-Kibaltchitch
-prettyName('ANDRES L. Santiago') // => Andres L. Santiago
+prettyName('andy warhol') // => Andy Warhol
+prettyName('issam el-said') // => Issam El-Said
+prettyName('byun jong-ha') // => Byun Jong-Ha
+prettyName('armand le veel') // => Armand Le Veel
+prettyName('dora de larios') // => Dora de Larios
+prettyName('fernand allard-l'olivier') // => Fernand Allard-L\'Olivier
+prettyName('pietro di francesco degli orioli') // => Pietro di Francesco degli Orioli
 ```

@@ -22,4 +22,5 @@ var prettyName = require('pretty-name');
 prettyName('ANDY WARHOL') // => Andy Warhol
 prettyName('ANDY WARHOL III') // => Andy Warhol III
 prettyName('NADINE BOUDKOVSKI-KIBALTCHITCH') // => Nadine Boudkovski-Kibaltchitch
+prettyName('ANDRES L. Santiago') // => Andres L. Santiago
 ```
